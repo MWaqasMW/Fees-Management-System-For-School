@@ -5,6 +5,7 @@ import express from "express";
 import http from "http";
 
 import { connectDb } from "./src/db/index.js";
+import feeRoutes from "./src/routes/feeRoutes.js";
 import studentRoutes from "./src/routes/studentRoutes.js";
 
 dotenv.config();
@@ -20,6 +21,7 @@ app.use(express.json());
 
 // Routes
 app.use('/api/students', studentRoutes);
+app.use('/api/fees', feeRoutes);
 
 
 // Connect DB and Start Server
