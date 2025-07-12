@@ -4,10 +4,11 @@ import dotenv from "dotenv";
 import express from "express";
 import http from "http";
 
-import { connectDb } from "./src/db/index.js";
+import studentRoutes from "./src/routes/studentRoutes.js";
 import feeRoutes from "./src/routes/feeRoutes.js";
 import paymentRoutes from "./src/routes/paymentRoutes.js";
-import studentRoutes from "./src/routes/studentRoutes.js";
+import reportRoutes from "./src/routes/reportRoutes.js";
+import {connectDb} from "./src/db/index.js";
 
 dotenv.config();
 
@@ -24,6 +25,7 @@ app.use(express.json());
 app.use('/api/students', studentRoutes);
 app.use('/api/fees', feeRoutes);
 app.use('/api/payments', paymentRoutes);
+app.use('/api/report', reportRoutes);
 
 // Connect DB and Start Server
 server.listen(PORT, async () => {
