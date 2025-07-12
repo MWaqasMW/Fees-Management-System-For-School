@@ -1,0 +1,9 @@
+# 🎓 School Fee Management System
+
+A complete full-stack web application to manage students, class fee structures, and track their monthly payments. Built using:
+
+- 🔧 Node.js + Express.js (Backend API)
+- 🗃️ SQL Server (Relational Database)
+- ⚛️ React.js (Frontend UI)
+
+---
