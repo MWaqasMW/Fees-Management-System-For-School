@@ -5,6 +5,7 @@ import express from "express";
 import http from "http";
 
 import { connectDb } from "./src/db/index.js";
+import studentRoutes from "./src/routes/studentRoutes.js";
 
 dotenv.config();
 
@@ -17,6 +18,8 @@ const PORT = process.env.PORT || 3002;
 app.use(cors());
 app.use(express.json());
 
+// Routes
+app.use('/api/students', studentRoutes);
 
 
 // Connect DB and Start Server
